@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>هوش برتر | HOOSH BARTAR — پلتفرم مگاپرامپت‌های هوش مصنوعی</title>
-<meta name="description" content="هوش برتر؛ پلتفرم مگاپرامپت‌های فارسی برای تولید محتوا، سناریو، تصویر، ویدئو و درآمدزایی با هوش مصنوعی. نمونه‌های رایگان و اشتراک ویژه.">
+<title>دوره هوش برتر | HOOSH BARTAR — مگاپرامپت‌های رایگان فارسی</title>
+<meta name="description" content="دوره هوش برتر و کتابخانه رایگان مگاپرامپت‌های فارسی برای تولید محتوا، سناریو، اینستاگرام، تصویر، ویدئو، کسب‌وکار، آموزش، معماری و درآمدزایی با هوش مصنوعی.">
 <meta name="theme-color" content="#07060d">
-<meta property="og:title" content="هوش برتر | HOOSH BARTAR">
-<meta property="og:description" content="پلتفرم مگاپرامپت‌های فارسی برای تولید محتوا و درآمدزایی با هوش مصنوعی">
+<meta property="og:title" content="دوره هوش برتر | HOOSH BARTAR">
+<meta property="og:description" content="مگاپرامپت‌های رایگان فارسی برای همه حوزه‌ها">
 <meta property="og:locale" content="fa_IR">
 <style>
 :root{--bg:#07060d;--s1:#0f0d19;--s2:#161326;--line:rgba(255,255,255,.09);--tx:#f4f2fc;--mu:#a29fbb;--pu:#8f3dff;--pu2:#c084fc;--cy:#5ee1ff;--glow:rgba(143,61,255,.4)}
@@ -16,11 +16,11 @@ html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:radial-gradient(900px 500px at 85% -5%,rgba(143,61,255,.22),transparent 60%),radial-gradient(700px 400px at 0 40%,rgba(94,225,255,.06),transparent 60%),var(--bg);color:var(--tx);font-family:Vazirmatn,"Noto Sans Arabic",Tahoma,system-ui,sans-serif;line-height:1.9;font-size:16px;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1100px;margin:auto;padding:0 18px}
-section{padding:60px 0}
-h1,h2,h3{line-height:1.5}
-h2{font-size:clamp(24px,5vw,34px);margin-bottom:8px}
+section{padding:60px 0;position:relative}
+h2{font-size:clamp(24px,5vw,34px);margin-bottom:8px;line-height:1.5}
 .sub{color:var(--mu);margin-bottom:28px;max-width:640px}
-.tag{display:inline-block;font-size:12px;letter-spacing:.5px;color:var(--cy);border:1px solid rgba(94,225,255,.35);padding:1px 12px;border-radius:99px;background:rgba(94,225,255,.07);margin-bottom:14px}
+.tag{display:inline-block;font-size:12px;color:var(--cy);border:1px solid rgba(94,225,255,.35);padding:1px 12px;border-radius:99px;background:rgba(94,225,255,.07);margin-bottom:14px}
+#pg{position:fixed;top:0;right:0;height:3px;width:0;background:linear-gradient(90deg,var(--pu),var(--cy));z-index:60}
 header{position:sticky;top:0;z-index:20;background:rgba(7,6,13,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:14px;height:60px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;white-space:nowrap}
@@ -30,66 +30,77 @@ nav{margin-right:auto;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
 nav a{padding:6px 12px;border-radius:8px;color:var(--mu);font-size:14px;white-space:nowrap}
 nav a:hover{color:var(--tx);background:var(--s2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;padding:12px 26px;border-radius:12px;background:linear-gradient(135deg,var(--pu),#5b1fd1);color:#fff;box-shadow:0 8px 30px var(--glow);transition:.2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer;font:inherit;font-weight:700;padding:12px 26px;border-radius:12px;background:linear-gradient(135deg,var(--pu),#5b1fd1);color:#fff;box-shadow:0 8px 30px var(--glow);transition:.2s}
 .btn:hover{transform:translateY(-2px)}
 .btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--tx)}
 .btn.ghost:hover{border-color:var(--pu)}
 .btn.sm{padding:6px 16px;font-size:14px}
-.hero{position:relative;padding:76px 0 60px;overflow:hidden}
-#net{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.mw{display:inline-block;opacity:0;transform:translateY(70px) scale(.85);transition:opacity .9s,transform .9s cubic-bezier(.2,.9,.2,1);transition-delay:var(--d)}
+.in .mw{opacity:1;transform:none}
+.mega{font-size:clamp(54px,16vw,132px);font-weight:900;line-height:1.3}
+.g{background:linear-gradient(90deg,var(--cy),var(--pu2),var(--pu),var(--cy));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:-250% 0}}
+.hero{padding:40px 0 30px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
 #net line{stroke:rgba(143,61,255,.35);stroke-width:1}
 #net circle{fill:var(--pu2);animation:pl 3.2s infinite}
 @keyframes pl{50%{opacity:.2}}
-@media(prefers-reduced-motion:reduce){#net circle{animation:none}}
-.hero .g{position:relative;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
-.hero h1{font-size:clamp(32px,7vw,56px);font-weight:900;margin-bottom:14px}
-.hero h1 b{background:linear-gradient(90deg,var(--cy),var(--pu2) 45%,var(--pu));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--mu);margin-bottom:26px;max-width:520px}
+.hg{position:relative;display:grid;gap:10px;grid-template-columns:.8fr 1.2fr;align-items:center}
+.rw{display:flex;justify-content:center;will-change:transform}
+#rob{width:min(300px,70vw);height:auto;filter:drop-shadow(0 0 40px rgba(143,61,255,.55));animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px)}}
+#rh{transform-origin:110px 110px}
+.bl{transform-box:fill-box;transform-origin:center;animation:bk 4.5s infinite}
+@keyframes bk{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+.wv{transform-origin:165px 160px;animation:wv 2.4s ease-in-out infinite}
+@keyframes wv{50%{transform:rotate(-22deg)}}
+.pz{animation:pl 2s infinite}
+.ht p{color:var(--mu);margin:10px 0 24px;max-width:520px}
 .acts{display:flex;gap:12px;flex-wrap:wrap}
-.term{background:rgba(15,13,25,.85);border:1px solid var(--line);border-radius:18px;box-shadow:0 0 70px rgba(143,61,255,.25);overflow:hidden}
-.term .tb{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line);align-items:center;font-size:12px;color:var(--mu)}
-.term .tb s{width:9px;height:9px;border-radius:50%;background:var(--pu);opacity:.8;text-decoration:none}
-.term pre{padding:16px;font:inherit;font-size:14px;white-space:pre-wrap;color:#ddd8f2}
-.term em{color:var(--cy);font-style:normal}
-.stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
-.stats div{font-size:13px;color:var(--mu)}
-.stats b{display:block;font-size:26px;color:var(--tx)}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
-.card{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:18px;padding:22px;transition:.25s;text-align:right;color:inherit;font:inherit;width:100%}
+.mq{direction:ltr;overflow:hidden;border-block:1px solid var(--line);background:rgba(15,13,25,.6);padding:10px 0}
+.mq div{display:flex;gap:40px;width:max-content;animation:mq 34s linear infinite;font-weight:700;color:var(--mu);white-space:nowrap}
+.mq span{direction:rtl}
+.mq span:nth-child(odd){color:var(--pu2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.crs{overflow:hidden}
+.crs .orb{position:absolute;top:-120px;left:50%;margin-left:-300px;width:600px;height:600px;opacity:.5;pointer-events:none;animation:sp 40s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.cns{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 38px}
+.cn{flex:1;min-width:120px;background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center}
+.cn b{display:block;font-size:34px;color:var(--cy);line-height:1.3}
+.cn span{font-size:13px;color:var(--mu)}
+.tl{position:relative;padding-right:48px;--p:0}
+.tl:before,.tl:after{content:"";position:absolute;right:15px;top:0;width:2px}
+.tl:before{bottom:0;background:var(--line)}
+.tl:after{height:calc(var(--p)*100%);background:linear-gradient(var(--cy),var(--pu));box-shadow:0 0 12px var(--pu)}
+.ti{position:relative;margin-bottom:14px}
+.ti b{position:absolute;right:-48px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:2px solid var(--pu);display:grid;place-items:center;font-size:13px;color:var(--cy)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:18px;padding:20px;transition:.25s;text-align:right;color:inherit;font:inherit;width:100%}
 .card:hover{border-color:rgba(143,61,255,.7);box-shadow:0 0 34px rgba(143,61,255,.2)}
-.card h3{font-size:18px;margin:8px 0 4px}
+.card h3{font-size:18px;margin:6px 0 4px;line-height:1.6}
 .card p{color:var(--mu);font-size:14px}
-.ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(143,61,255,.15);border:1px solid rgba(143,61,255,.45);color:var(--pu2);font-weight:800}
 button.card{cursor:pointer}
-.card.lk{border-style:dashed}
-.meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--pu2);margin-bottom:6px}
+.meta{display:flex;justify-content:space-between;font-size:12px;color:var(--pu2)}
 .meta span:last-child{color:var(--mu)}
-.meta .pro{color:#ffd166}
+.cats{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin:18px 0 22px}
+.ct{display:flex;align-items:center;gap:10px;background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:10px 12px;color:var(--tx);font:inherit;font-size:14px;cursor:pointer;text-align:right}
+.ct i{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-style:normal;font-weight:800;background:rgba(143,61,255,.15);border:1px solid rgba(143,61,255,.45);color:var(--pu2)}
+.ct small{display:block;color:var(--mu);font-size:11px;line-height:1.4}
+.ct.on{background:var(--pu);border-color:var(--pu)}
+.ct.on i{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
+.ct.on small{color:#eadcff}
 input,select{width:100%;background:var(--s1);border:1px solid var(--line);color:var(--tx);font:inherit;padding:12px 14px;border-radius:12px;outline:0}
 input:focus,select:focus{border-color:var(--pu);box-shadow:0 0 0 3px var(--glow)}
 select option{background:var(--s1)}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0 6px;scrollbar-width:none}
-.chip{flex:none;border:1px solid var(--line);background:var(--s1);color:var(--mu);padding:6px 16px;border-radius:99px;cursor:pointer;font:inherit;font-size:14px}
-.chip.on{background:var(--pu);border-color:var(--pu);color:#fff}
 .empty{text-align:center;color:var(--mu);padding:30px;grid-column:1/-1}
 .two{display:grid;gap:22px;grid-template-columns:1fr 1fr}
 .panel{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:24px}
 .panel label{display:block;font-size:14px;color:var(--mu);margin:12px 0 4px}
-.out{white-space:pre-wrap;background:#05040a;border:1px dashed var(--pu);border-radius:14px;padding:16px;font:inherit;font-size:14px;min-height:200px;color:#ddd8f2;margin-bottom:12px}
-.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.steps .card{counter-increment:s;position:relative;padding-top:46px}
-.steps .card:before{content:"0" counter(s);position:absolute;top:12px;right:20px;font-weight:900;font-size:22px;color:var(--cy);direction:ltr}
-.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));align-items:stretch}
-.plan{position:relative;display:flex;flex-direction:column;background:linear-gradient(170deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:22px;padding:26px}
-.plan.hot{border-color:var(--pu);box-shadow:0 0 50px rgba(143,61,255,.3)}
-.plan .rb{position:absolute;top:-12px;left:20px;background:linear-gradient(135deg,var(--pu),var(--cy));color:#07060d;font-size:12px;font-weight:800;padding:2px 14px;border-radius:99px}
-.plan h3{font-size:20px}
-.price{font-size:26px;font-weight:900;margin:8px 0 14px}
-.price small{font-size:13px;color:var(--mu);font-weight:400}
-.plan ul{list-style:none;color:var(--mu);font-size:14px;margin-bottom:20px;flex:1}
-.plan li{padding:4px 0 4px 0}
-.plan li:before{content:"✓";color:var(--cy);margin-left:8px;font-weight:800}
-.soon{display:inline-block;background:rgba(143,61,255,.18);color:var(--pu2);font-size:12px;padding:2px 12px;border-radius:99px;margin-right:8px;vertical-align:middle}
+.out{white-space:pre-wrap;background:#05040a;border:1px dashed var(--pu);border-radius:14px;padding:16px;font-size:14px;min-height:200px;color:#ddd8f2;margin-bottom:12px}
+.soon{display:inline-block;background:rgba(143,61,255,.18);color:var(--pu2);font-size:12px;padding:2px 12px;border-radius:99px;margin-right:8px}
 .dis{opacity:.55;pointer-events:none}
 details{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
 summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
@@ -99,80 +110,119 @@ details p{color:var(--mu);margin-top:8px}
 dialog{background:var(--s1);color:var(--tx);border:1px solid var(--pu);border-radius:20px;padding:24px;width:min(680px,94vw);max-height:90vh;overflow:auto;margin:auto;box-shadow:0 0 90px var(--glow)}
 dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
 dialog .x{float:left;background:var(--s2);border:0;color:var(--tx);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:18px}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size:14px;text-align:center}
-#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--pu);color:#fff;padding:10px 22px;border-radius:12px;transition:.3s;z-index:50;font-weight:700}
+footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font-size:14px;text-align:center}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(90px);background:var(--pu);color:#fff;padding:10px 22px;border-radius:12px;transition:.3s;z-index:70;font-weight:700}
 #toast.on{transform:translateX(-50%) translateY(0)}
-@media(max-width:820px){.hero .g,.two{grid-template-columns:1fr}section{padding:46px 0}.hero{padding-top:44px}.bar .btn{display:none}}
+#mc{position:fixed;left:12px;bottom:14px;z-index:30;display:flex;align-items:flex-end;gap:8px;flex-direction:row-reverse;cursor:pointer}
+#mc svg{width:58px;height:58px;filter:drop-shadow(0 0 14px var(--glow));animation:fl 4s ease-in-out infinite}
+#mb{max-width:210px;background:var(--s2);border:1px solid var(--pu);border-radius:14px 14px 14px 4px;padding:6px 12px;font-size:13px;opacity:0;transform:translateY(8px);transition:.4s;pointer-events:none;margin-bottom:14px}
+#mb.on{opacity:1;transform:none}
+@media(max-width:820px){.hg,.two{grid-template-columns:1fr}.rw{margin-top:6px}.ht{text-align:center}.ht p{margin-inline:auto}.acts{justify-content:center}section{padding:44px 0}.bar .btn{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.mw{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div id="pg"></div>
 
 <header>
  <div class="wrap bar">
   <a href="#home" class="logo"><i></i><span>هوش برتر<small>HOOSH BARTAR</small></span></a>
-  <nav><a href="#library">کتابخانه</a><a href="#builder">ساخت شخصی</a><a href="#plans">اشتراک‌ها</a><a href="#ai">اجرای مستقیم</a><a href="#faq">پرسش‌ها</a></nav>
+  <nav><a href="#course">دوره</a><a href="#library">کتابخانه</a><a href="#builder">ساخت شخصی</a><a href="#ai">اجرای مستقیم</a><a href="#faq">پرسش‌ها</a></nav>
   <a href="#login" class="btn sm">ورود هنرجو</a>
  </div>
 </header>
 
 <main>
-<section class="hero" id="home">
+<section class="hero" id="home" data-say="سلام! من ربات هوش برتر هستم. بیا با هم شروع کنیم 👋">
  <svg id="net" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
- <div class="wrap g">
-  <div>
-   <span class="tag">AI PROMPT PLATFORM</span>
-   <h1>مغز دوم تو برای<br><b>کار با هوش مصنوعی</b></h1>
-   <p>هوش برتر مجموعه‌ای از مگاپرامپت‌های فارسی و ساختاریافته است برای تولید محتوا، سناریو، تصویر، ویدئو و درآمدزایی. نمونه‌ها رایگان‌اند و نسخه‌های ویژه با اشتراک در دسترس قرار می‌گیرند.</p>
-   <div class="acts"><a href="#library" class="btn">شروع با نمونه‌های رایگان</a><a href="#plans" class="btn ghost">مشاهده اشتراک‌ها</a></div>
-   <div class="stats"><div><b id="stN">0</b>مگاپرامپت</div><div><b id="stC">0</b>دسته‌بندی</div><div><b>فارسی</b>و کاملاً راست‌چین</div></div>
+ <div class="wrap hg">
+  <div class="rw" id="rw">
+   <svg id="rob" viewBox="0 0 220 250" aria-label="ربات هوش برتر" role="img">
+    <defs>
+     <linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b2b70"/><stop offset="1" stop-color="#15112c"/></linearGradient>
+     <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#6d1fd1"/></linearGradient>
+    </defs>
+    <ellipse class="pz" cx="110" cy="238" rx="34" ry="7" fill="#8f3dff" opacity=".45"/>
+    <g id="rh">
+     <line x1="110" y1="40" x2="110" y2="20" stroke="#8f3dff" stroke-width="4"/>
+     <circle class="pz" cx="110" cy="14" r="8" fill="#5ee1ff"/>
+     <rect x="34" y="80" width="16" height="36" rx="7" fill="url(#gp)"/>
+     <rect x="170" y="80" width="16" height="36" rx="7" fill="url(#gp)"/>
+     <rect x="48" y="40" width="124" height="104" rx="36" fill="url(#gm)" stroke="#8f3dff" stroke-width="2"/>
+     <rect x="62" y="62" width="96" height="58" rx="26" fill="#05040a" stroke="rgba(94,225,255,.35)"/>
+     <g id="ey">
+      <ellipse cx="90" cy="90" rx="17" ry="19" fill="#5ee1ff" opacity=".18"/>
+      <ellipse cx="130" cy="90" rx="17" ry="19" fill="#5ee1ff" opacity=".18"/>
+      <ellipse class="bl" cx="90" cy="90" rx="10" ry="13" fill="#5ee1ff"/>
+      <ellipse class="bl" cx="130" cy="90" rx="10" ry="13" fill="#5ee1ff"/>
+     </g>
+     <path d="M96 128 Q110 138 124 128" stroke="#5ee1ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <rect x="72" y="150" width="76" height="76" rx="28" fill="url(#gm)" stroke="#8f3dff" stroke-width="2"/>
+    <circle class="pz" cx="110" cy="186" r="12" fill="url(#gp)"/>
+    <circle cx="110" cy="186" r="19" fill="none" stroke="#5ee1ff" stroke-opacity=".5"/>
+    <rect x="48" y="158" width="18" height="52" rx="9" fill="url(#gp)"/>
+    <g class="wv"><rect x="156" y="158" width="18" height="52" rx="9" fill="url(#gp)"/></g>
+   </svg>
   </div>
-  <div class="term">
-   <div class="tb"><s></s><s></s><s></s><span style="margin-right:auto;direction:ltr">megaprompt.txt</span></div>
-<pre><em>نقش:</em> استراتژیست محتوای حرفه‌ای
-<em>هدف:</em> برنامه ۳۰ روزه برای پیج من
-<em>مخاطب:</em> [مخاطب هدف]
-<em>خروجی:</em> جدول، هوک، فرمت و CTA
-<em>قانون:</em> ساده، کاربردی، قابل اجرا</pre>
+  <div class="ht rv mgx">
+   <span class="tag">همه‌چیز رایگان • فارسی • برای همه حوزه‌ها</span>
+   <h1 class="mega"><span class="mw" style="--d:.1s">دوره</span> <span class="mw g" style="--d:.35s">هوش</span> <span class="mw g" style="--d:.6s">برتر</span></h1>
+   <p>کتابخانه مگاپرامپت‌های فارسی و ساختاریافته برای تولید محتوا، سناریو، تصویر، ویدئو، کسب‌وکار، آموزش، معماری و درآمدزایی با هوش مصنوعی؛ انتخاب کن، شخصی‌سازی کن، کپی کن و اجرا کن.</p>
+   <div class="acts"><a href="#course" class="btn">ثبت‌نام رایگان دوره</a><a href="#library" class="btn ghost">کتابخانه رایگان</a></div>
   </div>
  </div>
 </section>
 
-<section id="how">
- <div class="wrap">
-  <span class="tag">چطور کار می‌کند</span>
-  <h2>از ایده تا نتیجه در سه قدم</h2>
-  <p class="sub">بدون آزمون و خطای طولانی؛ ساختار درست از همان اول آماده است.</p>
-  <div class="steps">
-   <div class="card"><h3>انتخاب</h3><p>مگاپرامپت مناسب را از دسته‌بندی‌ها پیدا کن.</p></div>
-   <div class="card"><h3>شخصی‌سازی</h3><p>جاهای خالی را با اطلاعات خودت پر کن.</p></div>
-   <div class="card"><h3>اجرا</h3><p>کپی کن و در ابزار هوش مصنوعی دلخواهت اجرا کن.</p></div>
+<div class="mq"><div id="mqt"></div></div>
+
+<section class="crs" id="course" data-say="دوره کاملاً رایگانه. از ماژول اول شروع کن!">
+ <svg class="orb" viewBox="0 0 600 600" aria-hidden="true"><circle cx="300" cy="300" r="290" fill="none" stroke="#8f3dff" stroke-width="1.5" stroke-dasharray="6 14"/><circle cx="300" cy="300" r="210" fill="none" stroke="#5ee1ff" stroke-width="1" stroke-dasharray="2 10"/><circle cx="300" cy="10" r="7" fill="#c084fc"/><circle cx="90" cy="300" r="5" fill="#5ee1ff"/></svg>
+ <div class="wrap" style="position:relative">
+  <span class="tag">آموزش گام‌به‌گام</span>
+  <div class="mgx rv"><div class="mega"><span class="mw" style="--d:.05s">دوره</span> <span class="mw g" style="--d:.3s">هوش</span> <span class="mw g" style="--d:.55s">برتر</span></div></div>
+  <p class="sub rv">از اولین مگاپرامپت تا درآمد آنلاین؛ شش ماژول عملی و بدون پیچیدگی. ثبت‌نام و دسترسی کاملاً رایگان است.</p>
+  <div class="cns rv" id="cns">
+   <div class="cn"><b data-n="6">0</b><span>ماژول آموزشی</span></div>
+   <div class="cn"><b id="cp" data-n="16">0</b><span>مگاپرامپت آماده</span></div>
+   <div class="cn"><b id="cc" data-n="9">0</b><span>حوزه کاربردی</span></div>
+   <div class="cn"><b style="font-size:30px">رایگان</b><span>برای همه</span></div>
   </div>
+  <div class="tl" id="tl">
+   <div class="ti card rv"><b>۱</b><h3>شروع مسیر</h3><p>آشنایی با هوش مصنوعی و ساخت اولین مگاپرامپت.</p></div>
+   <div class="ti card rv"><b>۲</b><h3>پرامپت‌نویسی حرفه‌ای</h3><p>نقش، هدف، ورودی، خروجی و قانون؛ فرمول نتیجه دقیق.</p></div>
+   <div class="ti card rv"><b>۳</b><h3>تولید محتوا و سناریو</h3><p>تقویم محتوا، هوک، کپشن و سناریوی ریلز.</p></div>
+   <div class="ti card rv"><b>۴</b><h3>تصویر و ویدئو با هوش مصنوعی</h3><p>پرامپت‌های دقیق برای تصویر، ویدئو و انیمیشن.</p></div>
+   <div class="ti card rv"><b>۵</b><h3>رشد پیج و فروش</h3><p>برندسازی، متن فروش و تحلیل رقبا.</p></div>
+   <div class="ti card rv"><b>۶</b><h3>درآمدزایی آنلاین</h3><p>تبدیل مهارت به محصول و ساخت دوره.</p></div>
+  </div>
+  <p style="margin-top:26px"><a class="btn" id="reg" href="#faq">ثبت‌نام رایگان در دوره</a></p>
  </div>
 </section>
 
-<section id="library">
+<section id="library" data-say="هر مگاپرامپتی خواستی بزن و با یک کلیک کپی کن.">
  <div class="wrap">
-  <span class="tag">کتابخانه</span>
-  <h2>کتابخانه مگاپرامپت‌ها</h2>
-  <p class="sub">نمونه‌های رایگان قابل کپی‌اند. موارد قفل‌دار فقط برای دارندگان اشتراک است.</p>
-  <input id="q" type="search" placeholder="جست‌وجو؛ مثلاً: ریلز، کپشن، محصول…">
-  <div class="chips" id="chips"></div>
+  <span class="tag">کتابخانه رایگان</span>
+  <h2 class="rv">دسته‌بندی‌ها و مگاپرامپت‌ها</h2>
+  <p class="sub rv">یک حوزه را انتخاب کن یا جست‌وجو کن. همه مگاپرامپت‌ها رایگان و قابل کپی‌اند.</p>
+  <input id="q" type="search" placeholder="جست‌وجو؛ مثلاً: ریلز، فروش، تصویر، آموزش…">
+  <div class="cats" id="cats"></div>
   <div class="grid" id="cards"></div>
  </div>
 </section>
 
-<section id="builder">
+<section id="builder" data-say="اطلاعاتت را بده تا برایت مگاپرامپت شخصی بسازم.">
  <div class="wrap">
   <span class="tag">ابزار رایگان</span>
-  <h2>ساخت مگاپرامپت شخصی‌شده</h2>
-  <p class="sub">اطلاعات را وارد کن تا یک مگاپرامپت آماده ساخته شود. همه‌چیز فقط در مرورگر خودت انجام می‌شود و جایی ذخیره نمی‌شود.</p>
+  <h2 class="rv">ساخت مگاپرامپت شخصی‌شده</h2>
+  <p class="sub rv">اطلاعات را وارد کن تا مگاپرامپت آماده شود. همه‌چیز فقط در مرورگر خودت انجام می‌شود و جایی ذخیره نمی‌شود.</p>
   <div class="two">
    <form class="panel" id="bf">
-    <label>حوزه یا موضوع</label><input id="b1" required placeholder="مثلاً: طراحی داخلی">
-    <label>مخاطب هدف</label><input id="b2" required placeholder="مثلاً: زنان ۲۵ تا ۴۰ ساله علاقه‌مند به دکوراسیون">
-    <label>هدف</label><select id="b3"><option>افزایش فالوور</option><option>فروش خدمات</option><option>آموزش مخاطب</option><option>ساخت اعتبار برند</option></select>
+    <label>حوزه یا موضوع</label><input id="b1" required placeholder="مثلاً: آموزش زبان، فروشگاه آنلاین، آشپزی…">
+    <label>مخاطب هدف</label><input id="b2" required placeholder="مثلاً: دانشجوها، مادران، صاحبان کسب‌وکار">
+    <label>هدف</label><select id="b3"><option>افزایش فالوور</option><option>فروش محصول یا خدمت</option><option>آموزش مخاطب</option><option>ساخت اعتبار برند</option></select>
     <label>لحن</label><select id="b4"><option>صمیمی و ساده</option><option>حرفه‌ای و جدی</option><option>الهام‌بخش</option><option>لوکس و مینیمال</option></select>
-    <label>نوع خروجی</label><select id="b5"><option>برنامه محتوایی ۳۰ روزه</option><option>سناریوی ریلز</option><option>کپشن و هوک</option><option>ایده درآمدزایی</option></select>
+    <label>نوع خروجی</label><select id="b5"><option>برنامه محتوایی ۳۰ روزه</option><option>سناریوی ریلز</option><option>کپشن و هوک</option><option>متن فروش</option><option>برنامه آموزشی</option><option>ایده درآمدزایی</option></select>
     <button class="btn" style="width:100%;margin-top:16px">ساخت مگاپرامپت</button>
    </form>
    <div class="panel">
@@ -183,24 +233,15 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size
  </div>
 </section>
 
-<section id="plans">
- <div class="wrap">
-  <span class="tag">اشتراک‌ها</span>
-  <h2>طرح مناسب خودت را انتخاب کن</h2>
-  <p class="sub">پرداخت آنلاین خودکار در مرحله بعد به سایت وصل می‌شود. تا آن زمان، ثبت‌نام از طریق پشتیبانی انجام می‌شود.</p>
-  <div class="plans" id="plansBox"></div>
- </div>
-</section>
-
-<section id="ai">
+<section id="ai" data-say="اجرای مستقیم هوش مصنوعی به‌زودی اضافه می‌شود!">
  <div class="wrap">
   <span class="tag">به‌زودی</span>
-  <h2>اجرای مستقیم هوش مصنوعی</h2>
-  <p class="sub">در نسخه‌های بعد، مگاپرامپت را بدون خروج از سایت اجرا می‌کنی. این بخش فعلاً فقط معرفی است و هنوز به هیچ سرویس هوش مصنوعی وصل نیست.</p>
-  <div class="steps">
-   <div class="card"><h3>انتخاب مگاپرامپت</h3><p>از کتابخانه یا فرم شخصی‌سازی.</p></div>
-   <div class="card"><h3>اجرا با یک کلیک</h3><p>اتصال امن از طریق سرور اختصاصی.</p></div>
-   <div class="card"><h3>دریافت و ذخیره</h3><p>خروجی در پنل هنرجو نگه‌داری می‌شود.</p></div>
+  <h2 class="rv">اجرای مستقیم هوش مصنوعی</h2>
+  <p class="sub rv">در نسخه‌های بعد، مگاپرامپت را بدون خروج از سایت اجرا می‌کنی. این بخش فعلاً فقط معرفی است و به هیچ سرویس هوش مصنوعی وصل نیست.</p>
+  <div class="grid">
+   <div class="card rv"><h3>۱. انتخاب مگاپرامپت</h3><p>از کتابخانه یا فرم شخصی‌سازی.</p></div>
+   <div class="card rv"><h3>۲. اجرا با یک کلیک</h3><p>اتصال امن از طریق سرور اختصاصی.</p></div>
+   <div class="card rv"><h3>۳. دریافت و ذخیره</h3><p>خروجی در پنل هنرجو نگه‌داری می‌شود.</p></div>
   </div>
  </div>
 </section>
@@ -220,14 +261,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size
  </div>
 </section>
 
-<section id="faq">
+<section id="faq" data-say="سؤالی داری؟ از پشتیبانی بپرس.">
  <div class="wrap" style="max-width:760px">
   <span class="tag">پشتیبانی</span>
   <h2>پرسش‌های متداول</h2>
   <p class="sub">پاسخ سؤال‌های رایج</p>
-  <details><summary>مگاپرامپت چیست؟</summary><p>یک دستور کامل و ساختاریافته برای هوش مصنوعی که نقش، هدف، ورودی‌ها و قالب خروجی را دقیق مشخص می‌کند.</p></details>
+  <details><summary>مگاپرامپت چیست؟</summary><p>یک دستور کامل و ساختاریافته برای هوش مصنوعی که نقش، هدف، ورودی‌ها، قالب خروجی و قوانین را دقیق مشخص می‌کند.</p></details>
+  <details><summary>همه‌چیز رایگان است؟</summary><p>بله. دوره، کتابخانه مگاپرامپت‌ها و ابزار ساخت مگاپرامپت شخصی برای همه رایگان است.</p></details>
   <details><summary>روی کدام هوش مصنوعی کار می‌کند؟</summary><p>متن‌ها روی اکثر ابزارهای چت‌محور قابل استفاده‌اند. پرامپت‌های تصویر و ویدئو را می‌توان در ابزارهای مربوطه استفاده کرد.</p></details>
-  <details><summary>چه چیزی رایگان است و چه چیزی اشتراکی؟</summary><p>نمونه‌های عمومی و ابزار ساخت مگاپرامپت شخصی رایگان‌اند. مگاپرامپت‌های ویژه و محتوای هنرجویان با اشتراک در دسترس هستند.</p></details>
   <details><summary>اطلاعاتی که در فرم وارد می‌کنم ذخیره می‌شود؟</summary><p>خیر. در نسخه فعلی همه‌چیز فقط در مرورگر شما پردازش می‌شود.</p></details>
   <p style="margin-top:20px"><a class="btn" id="sup" href="#faq">ارتباط با پشتیبانی</a></p>
  </div>
@@ -235,6 +276,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size
 </main>
 
 <footer><div class="wrap">© هوش برتر | HOOSH BARTAR — همه حقوق محفوظ است</div></footer>
+
+<div id="mc" title="رفتن به بالا"><svg viewBox="0 0 60 60" aria-hidden="true"><line x1="30" y1="12" x2="30" y2="5" stroke="#8f3dff" stroke-width="2.5"/><circle cx="30" cy="4" r="3" fill="#5ee1ff"/><rect x="8" y="12" width="44" height="38" rx="14" fill="url(#gm)" stroke="#8f3dff" stroke-width="1.5"/><rect x="14" y="20" width="32" height="22" rx="9" fill="#05040a"/><circle class="bl" cx="23" cy="31" r="4" fill="#5ee1ff"/><circle class="bl" cx="37" cy="31" r="4" fill="#5ee1ff"/></svg><div id="mb"></div></div>
 
 <dialog id="dlg">
  <button class="x" onclick="dlg.close()" aria-label="بستن">✕</button>
@@ -247,93 +290,126 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size
 <div id="toast">کپی شد ✓</div>
 
 <script>
-// لینک پشتیبانی (اینستاگرام یا تلگرام). اگر پیج شما فرق دارد، اینجا عوض کنید:
+// لینک پشتیبانی و ثبت‌نام (اینستاگرام یا تلگرام). اگر پیج شما فرق دارد اینجا عوض کنید:
 var SUPPORT_LINK = "https://t.me/zedarchi";
 
-// طرح‌های اشتراک: قیمت و لینک پرداخت را خودتان اینجا بنویسید.
-// price مثل "۴۹۰,۰۰۰ تومان" ؛ link لینک پرداخت (بعد از راه‌اندازی درگاه). خالی باشد، دکمه به پشتیبانی می‌رود.
-var PLANS=[
- {n:"رایگان",price:"۰",per:"",hot:0,btn:"شروع رایگان",link:"#library",f:["همه نمونه‌های عمومی","ابزار ساخت مگاپرامپت شخصی","کپی با یک کلیک"]},
- {n:"اشتراک ویژه",price:"",per:"/ ماهانه",hot:1,btn:"دریافت اشتراک",link:"",f:["همه مگاپرامپت‌های ویژه","به‌روزرسانی ماهانه کتابخانه","پشتیبانی اختصاصی"]},
- {n:"هنرجو",price:"",per:"/ دوره",hot:0,btn:"ثبت‌نام در دوره",link:"",f:["دسترسی کامل به کتابخانه","آموزش گام‌به‌گام تولید محتوا و درآمدزایی","پنل هنرجو و اجرای مستقیم (به‌زودی)"]}
-];
-
-var CATS=[
- ["تولید محتوا","محتوای منظم و هدفمند","م"],["سناریونویسی","سناریو برای ریلز و ویدئو","س"],["اینستاگرام","کپشن، هوک و ایده پست","ا"],
- ["معماری","معرفی پروژه و محتوای تخصصی","ع"],["تولید تصویر","پرامپت‌های دقیق تصویرساز","ت"],["تولید ویدئو","صحنه‌بندی و پرامپت ویدئو","و"],["درآمدزایی","ایده و مسیر کسب درآمد","د"]
-];
-// v:1 یعنی ویژه و قفل‌دار؛ متن کامل ویژه‌ها عمداً در این فایل عمومی نیست.
+var CATS=[["تولید محتوا","برنامه و بازنویسی","م"],["سناریونویسی","ریلز و سریال","س"],["اینستاگرام","هوک، کپشن، بیو","ا"],["تولید تصویر","سینمایی و محصول","ت"],["تولید ویدئو","شات‌به‌شات","و"],["کسب‌وکار و فروش","متن فروش و رقبا","ک"],["آموزش و یادگیری","برنامه مهارت","آ"],["معماری و طراحی","معرفی پروژه","ع"],["درآمدزایی","محصول و دوره","د"]];
 var P=[
-{id:1,c:"تولید محتوا",l:"مبتدی",t:"برنامه محتوایی ۳۰ روزه",d:"تقویم محتوا برای یک پیج با فرمت و هدف هر روز.",
-p:"تو یک استراتژیست محتوای حرفه‌ای هستی.\nبرای پیجی با موضوع [موضوع] و مخاطب [مخاطب هدف] یک برنامه محتوایی ۳۰ روزه بساز.\nخروجی را در جدول بده با ستون‌های: روز، ایده، فرمت (ریلز/پست/استوری)، هوک، هدف و CTA.\nقوانین: ایده‌ها کاربردی، متنوع و قابل اجرا باشند."},
-{id:2,c:"تولید محتوا",l:"مبتدی",t:"بازنویسی متن با لحن برند",d:"یک متن خام را با لحن دلخواه بازنویسی کن.",
-p:"تو یک ویراستار و کپی‌رایتر فارسی هستی.\nمتن زیر را با لحن [لحن برند] برای [مخاطب هدف] بازنویسی کن.\nمعنا را حفظ کن، جمله‌ها را کوتاه و روان کن و در پایان دو نسخه پیشنهادی بده.\n\nمتن:\n[متن شما]"},
-{id:3,c:"سناریونویسی",l:"متوسط",t:"سناریوی ریلز ۳۰ ثانیه‌ای",d:"سناریوی صحنه‌به‌صحنه با هوک ۳ ثانیه‌ای.",
-p:"تو یک سناریونویس شبکه‌های اجتماعی هستی.\nیک سناریوی ۳۰ ثانیه‌ای درباره [موضوع] بنویس.\nساختار: هوک ۳ ثانیه‌ای، ۴ صحنه با زمان‌بندی، توضیح تصویر هر صحنه، متن گوینده و جمله پایانی.\nلحن: [لحن]. مخاطب: [مخاطب هدف]."},
-{id:4,c:"اینستاگرام",l:"مبتدی",t:"هوک و کپشن جذاب",d:"۱۰ هوک و ۳ کپشن کامل برای یک پست.",
-p:"تو متخصص رشد اینستاگرام هستی.\nبرای پستی درباره [موضوع] تولید کن:\n۱) ۱۰ هوک کوتاه و کنجکاوی‌برانگیز\n۲) ۳ کپشن کامل با لحن [لحن]\n۳) ۵ هشتگ مرتبط\nدر انتهای هر کپشن یک دعوت به اقدام بنویس."},
-{id:5,c:"معماری",l:"متوسط",t:"معرفی پروژه معماری برای پیج",d:"متن حرفه‌ای معرفی یک پروژه برای مخاطب عمومی.",
-p:"تو نویسنده تخصصی حوزه معماری هستی.\nپروژه [نام یا نوع پروژه] را برای مخاطب عمومی معرفی کن: ایده اصلی طراحی، مصالح، نور، تجربه فضا و یک نکته آموزشی.\nخروجی: یک کپشن ۱۵۰ کلمه‌ای و پنج جمله کوتاه برای اسلایدهای کاروسل."},
-{id:6,c:"تولید تصویر",l:"متوسط",t:"تصویر سینمایی از هر سوژه",d:"پرامپت دقیق برای پرتره، صحنه یا طبیعت.",
-p:"یک تصویر سینمایی و واقع‌گرایانه از [سوژه] بساز.\nمحیط: [مکان]. نور: [طلایی غروب / نرم / درامانیک].\nزاویه دوربین: [زاویه]. لنز: [مثلاً ۵۰ میلی‌متر]. حال‌وهوا: [حس تصویر]. رنگ‌ها: [پالت].\nجزئیات بالا، بافت واقعی، بدون هیچ متن یا لوگو روی تصویر."},
-{id:7,c:"تولید ویدئو",l:"پیشرفته",t:"پرامپت ویدئوی سینمایی ۱۰ ثانیه‌ای",d:"صحنه‌بندی ثانیه‌به‌ثانیه برای ابزارهای ویدئوساز.",
-p:"یک ویدئوی سینمایی ۱۰ ثانیه‌ای بساز.\nموضوع: [موضوع]\nثانیه ۰ تا ۳: [صحنه اول و حرکت دوربین]\nثانیه ۳ تا ۷: [صحنه دوم]\nثانیه ۷ تا ۱۰: [صحنه پایانی]\nسبک: [سبک]. صدا: موسیقی و صدای محیط.\nقانون مهم: هیچ متن، زیرنویس یا نوشته‌ای روی ویدئو نباشد."},
-{id:8,c:"درآمدزایی",l:"مبتدی",t:"تبدیل مهارت به محصول قابل فروش",d:"از مهارت شخصی تا سه ایده محصول و مسیر شروع.",
-p:"تو مشاور کسب‌وکارهای کوچک آنلاین هستی.\nمهارت من: [مهارت]. زمان در دسترس: [ساعت در هفته].\nسه ایده محصول یا خدمت قابل فروش پیشنهاد بده و برای هر کدام مخاطب، قیمت‌گذاری منطقی، مراحل شروع در ۷ روز و ریسک‌ها را توضیح بده."},
-{id:9,v:1,c:"تولید محتوا",l:"ویژه",t:"سیستم محتوای ۹۰ روزه ویروسی",d:"نقشه کامل سه‌ماهه با ستون‌های محتوایی و تحلیل نتایج."},
-{id:10,v:1,c:"سناریونویسی",l:"ویژه",t:"سریال کوتاه چندقسمتی با شخصیت ثابت",d:"قالب کامل شخصیت‌پردازی و ساخت قسمت‌های پیوسته."},
-{id:11,v:1,c:"تولید ویدئو",l:"ویژه",t:"پکیج ویدئوی سینمایی حرفه‌ای",d:"پرامپت‌های چندمرحله‌ای با کنترل دوربین، نور و صدا."},
-{id:12,v:1,c:"درآمدزایی",l:"ویژه",t:"نقشه درآمدزایی با هوش مصنوعی",d:"مسیر گام‌به‌گام از مهارت تا اولین فروش."}
+{id:1,c:"تولید محتوا",l:"مبتدی",t:"برنامه محتوایی ۳۰ روزه",d:"تقویم کامل محتوا با هوک، فرمت و معیار سنجش.",
+p:"نقش: استراتژیست ارشد محتوا.\nهدف: ساخت تقویم محتوایی ۳۰ روزه برای [نام پیج یا برند] در حوزه [حوزه].\nورودی‌ها: مخاطب [مخاطب هدف]، هدف اصلی [رشد/فروش/اعتبار]، پلتفرم [پلتفرم]، زمان تولید در هفته [ساعت].\nخروجی: جدول با ستون‌های روز، موضوع، فرمت، هوک ۳ ثانیه‌ای، پیام اصلی، دعوت به اقدام و معیار سنجش؛ در پایان سه ستون محتوایی اصلی و سهم هرکدام را بنویس.\nقوانین: ایده‌ها قابل اجرا با گوشی، متنوع و بدون تکرار باشند."},
+{id:2,c:"تولید محتوا",l:"مبتدی",t:"بازنویسی متن با لحن برند",d:"متن خام را روان، کوتاه و هم‌لحن با برند کن.",
+p:"نقش: ویراستار و کپی‌رایتر فارسی.\nهدف: بازنویسی متن زیر با لحن [لحن برند] برای [مخاطب هدف].\nقوانین: معنا و اعداد را تغییر نده، جمله‌ها کوتاه و روان باشند، کلیشه و تکرار حذف شود.\nخروجی: ۱) نسخه اصلی بازنویسی‌شده ۲) نسخه کوتاه‌تر ۳) سه عنوان پیشنهادی ۴) فهرست تغییرات مهم.\n\nمتن:\n[متن شما]"},
+{id:3,c:"سناریونویسی",l:"متوسط",t:"سناریوی ریلز ۳۰ ثانیه‌ای",d:"سناریوی صحنه‌به‌صحنه با هوک و دعوت به اقدام.",
+p:"نقش: سناریونویس شبکه‌های اجتماعی.\nهدف: سناریوی ریلز ۳۰ ثانیه‌ای درباره [موضوع] برای [مخاطب هدف] با لحن [لحن].\nساختار: هوک ۳ ثانیه‌ای، چهار صحنه با زمان‌بندی، توضیح تصویر و حرکت دوربین هر صحنه، متن گوینده، پیشنهاد صدا و موسیقی، جمله پایانی و دعوت به اقدام.\nقانون: هر صحنه یک پیام داشته باشد و نیمه‌ی اول ویدئو مخاطب را نگه دارد."},
+{id:4,c:"سناریونویسی",l:"متوسط",t:"سریال کوتاه چندقسمتی",d:"قسمت‌های پیوسته با شخصیت‌های ثابت و گره پایانی.",
+p:"نقش: نویسنده سریال‌های کوتاه.\nشخصیت‌ها: [نام و ویژگی شخصیت اول]، [نام و ویژگی شخصیت دوم].\nهدف: نوشتن قسمت [شماره] به مدت حدود ۶۰ ثانیه در [مکان]، ادامه‌ی قسمت قبل: [خلاصه قسمت قبل].\nفرمت: شات‌به‌شات با توضیح تصویر، دیالوگ هر شخصیت، احساس هر صحنه و یک گره کوچک در پایان.\nقانون: دیالوگ‌ها طبیعی و محاوره‌ای باشند و رفتار شخصیت‌ها ثابت بماند."},
+{id:5,c:"اینستاگرام",l:"مبتدی",t:"هوک و کپشن جذاب",d:"۱۰ هوک و ۳ کپشن کامل برای یک پست.",
+p:"نقش: متخصص رشد اینستاگرام.\nهدف: ساخت محتوای یک پست درباره [موضوع] برای [مخاطب هدف].\nخروجی: ۱) ده هوک کوتاه و کنجکاوی‌برانگیز ۲) سه کپشن کامل با لحن [لحن] با ساختار مشکل، راه‌حل، دعوت به اقدام ۳) پنج هشتگ مرتبط ۴) یک ایده برای کامنت اول.\nقانون: از کلی‌گویی بپرهیز و دلیل جذابیت هر هوک را در یک خط بنویس."},
+{id:6,c:"اینستاگرام",l:"متوسط",t:"بهینه‌سازی بیو و پروفایل",d:"بیو، هایلایت و پست‌های ثابت برای جذب فالوور.",
+p:"نقش: مشاور برندینگ شخصی در اینستاگرام.\nورودی: حوزه [حوزه]، مخاطب [مخاطب هدف]، بیو فعلی [بیو فعلی].\nخروجی: سه نسخه بیو کوتاه، پیشنهاد نام و دسته‌بندی هایلایت‌ها، ایده سه پست ثابت، برنامه ارسال هفتگی و فهرست پنج اشتباه رایج در پروفایل من.\nقانون: بیو حداکثر ۱۵۰ کاراکتر باشد و وعده نتیجه مشخص بدهد."},
+{id:7,c:"تولید تصویر",l:"متوسط",t:"تصویر سینمایی از هر سوژه",d:"پرتره، طبیعت، صحنه یا مفهوم با کیفیت سینمایی.",
+p:"یک تصویر سینمایی و واقع‌گرایانه از [سوژه] بساز.\nمحیط: [مکان]. نور: [طلایی غروب / نرم / دراماتیک]. زاویه دوربین: [زاویه]. لنز: [مثلاً ۵۰ میلی‌متر]. حال‌وهوا: [حس تصویر]. پالت رنگی: [رنگ‌ها].\nجزئیات: بافت‌های واقعی، عمق میدان طبیعی، ترکیب‌بندی متعادل.\nقانون: بدون هیچ متن، لوگو یا واترمارک روی تصویر؛ کیفیت بالا."},
+{id:8,c:"تولید تصویر",l:"مبتدی",t:"عکس تبلیغاتی محصول",d:"تصویر استودیویی برای معرفی یک محصول.",
+p:"یک عکس تبلیغاتی حرفه‌ای از [نام محصول] بساز.\nپس‌زمینه: [ساده / طبیعی / لوکس]. نور: استودیویی نرم با بازتاب ملایم. زاویه: [روبه‌رو / سه‌چهارم / از بالا].\nمحصول در مرکز و کاملاً واضح باشد و فضای خالی برای افزودن متن در طراحی بعدی بماند.\nسبک: [مینیمال / گرم / مدرن]. بدون هیچ نوشته یا لوگوی اضافه."},
+{id:9,c:"تولید ویدئو",l:"پیشرفته",t:"ویدئوی سینمایی ۱۰ ثانیه‌ای",d:"صحنه‌بندی ثانیه‌به‌ثانیه برای ابزارهای ویدئوساز.",
+p:"یک ویدئوی سینمایی ۱۰ ثانیه‌ای بساز.\nموضوع: [موضوع]. سبک: [سبک]. نسبت تصویر: [۹:۱۶ یا ۱۶:۹].\nثانیه ۰ تا ۳: [صحنه اول و حرکت دوربین]\nثانیه ۳ تا ۷: [صحنه دوم]\nثانیه ۷ تا ۱۰: [صحنه پایانی]\nصدا: موسیقی و صدای محیط.\nقانون مهم: هیچ متن، زیرنویس یا نوشته‌ای روی ویدئو نباشد."},
+{id:10,c:"تولید ویدئو",l:"متوسط",t:"انیمیشن کارتونی کوتاه",d:"سناریوی تصویری انیمیشن سه‌بعدی ۲۵ ثانیه‌ای.",
+p:"یک انیمیشن سه‌بعدی به سبک [مثلاً پیکسار] بساز، مدت ۲۵ ثانیه.\nشخصیت اصلی: [ظاهر و حس شخصیت]. مکان: [مکان]. رویداد اصلی: [اتفاق داستان].\nصحنه‌ها را شات‌به‌شات با زمان بنویس؛ برای هر شات حرکت دوربین، حالت چهره، نور و صدای محیط را مشخص کن.\nقانون: هیچ نوشته یا زیرنویسی روی ویدئو نباشد و شخصیت‌ها در همه شات‌ها ظاهر یکسان داشته باشند."},
+{id:11,c:"کسب‌وکار و فروش",l:"متوسط",t:"متن معرفی و فروش محصول",d:"صفحه فروش با مشکل، راه‌حل و پاسخ به اعتراض‌ها.",
+p:"نقش: کپی‌رایتر فروش.\nهدف: نوشتن متن معرفی و فروش [نام محصول یا خدمت] برای [مخاطب هدف].\nورودی‌ها: ویژگی‌ها [ویژگی‌ها]، مزیت نسبت به رقبا [مزیت]، پیشنهاد ویژه [پیشنهاد].\nساختار: عنوان جذاب، مشکل مخاطب، راه‌حل، سه مزیت اصلی، اثبات اجتماعی، پاسخ به سه اعتراض رایج و دعوت به اقدام.\nخروجی: یک نسخه بلند برای صفحه فروش و یک نسخه کوتاه برای پست."},
+{id:12,c:"کسب‌وکار و فروش",l:"پیشرفته",t:"تحلیل رقبا و جایگاه‌یابی",d:"پیدا کردن جایگاه متمایز برای کسب‌وکار.",
+p:"نقش: تحلیلگر بازار.\nهدف: تحلیل رقبا و پیدا کردن جایگاه متمایز برای [کسب‌وکار من] در حوزه [حوزه].\nورودی: رقبای من [نام رقبا].\nخروجی: جدول مقایسه (پیشنهاد ارزش، قیمت، نقاط قوت و ضعف)، سه فرصت بازار، جمله جایگاه‌یابی برند و پنج اقدام عملی برای ۳۰ روز آینده.\nقانون: فقط بر اطلاعاتی که من داده‌ام تکیه کن و حدس‌هایت را مشخص کن."},
+{id:13,c:"آموزش و یادگیری",l:"مبتدی",t:"برنامه ۴ هفته‌ای یادگیری مهارت",d:"برنامه روزانه با تمرین، پروژه و خودسنجی.",
+p:"نقش: مربی یادگیری.\nهدف: طراحی برنامه چهار هفته‌ای برای یادگیری [مهارت] از سطح [مبتدی/متوسط].\nورودی: زمان در دسترس روزانه [دقیقه]، هدف نهایی [هدف].\nخروجی: برنامه هفتگی با تمرین روزانه، منابع پیشنهادی، پروژه کوچک هر هفته، آزمون خودسنجی و راهکار برای روزهایی که انگیزه ندارم.\nقانون: ساده، مرحله‌ای و قابل اجرا باشد."},
+{id:14,c:"معماری و طراحی",l:"متوسط",t:"معرفی پروژه معماری یا طراحی داخلی",d:"کپشن، کاروسل و ایده ریلز از یک پروژه.",
+p:"نقش: نویسنده تخصصی معماری و طراحی داخلی.\nهدف: معرفی پروژه [نام یا نوع پروژه] برای مخاطب عمومی.\nمحتوا: ایده اصلی طراحی، مصالح، نور، تجربه فضا و یک نکته آموزشی.\nخروجی: کپشن ۱۵۰ کلمه‌ای، متن پنج اسلاید کاروسل و سه ایده برای ریلز از همین پروژه.\nلحن: [لحن]."},
+{id:15,c:"درآمدزایی",l:"مبتدی",t:"تبدیل مهارت به محصول قابل فروش",d:"سه ایده محصول با مسیر شروع هفت‌روزه.",
+p:"نقش: مشاور کسب‌وکارهای کوچک آنلاین.\nورودی: مهارت من [مهارت]، زمان در دسترس [ساعت در هفته]، بودجه شروع [بودجه].\nخروجی: سه ایده محصول یا خدمت قابل فروش؛ برای هرکدام مخاطب، قیمت‌گذاری منطقی، مراحل شروع در ۷ روز، کانال جذب مشتری، ریسک‌ها و معیار موفقیت ۳۰ روزه.\nقانون: واقع‌بین باش و وعده درآمد قطعی نده."},
+{id:16,c:"درآمدزایی",l:"متوسط",t:"طراحی سرفصل دوره آنلاین",d:"سرفصل، تمرین، پروژه پایانی و پیام تبلیغاتی.",
+p:"نقش: طراح آموزشی حرفه‌ای.\nهدف: طراحی دوره آنلاین درباره [موضوع دوره] برای [مخاطب].\nخروجی: نام جذاب دوره، وعده نتیجه، پنج فصل با سه درس کوتاه، تمرین عملی هر فصل، پروژه پایانی، پیشنهاد فرمت ارائه (ویدئو/متن/تمرین) و پیام تبلیغاتی سه‌خطی.\nقانون: زبان ساده و مرحله‌ای باشد."}
 ];
 
 var $=function(i){return document.getElementById(i)};
-var cat="همه",qs="";
-$("stN").textContent=P.length;$("stC").textContent=CATS.length;
+var cat="همه",qs="",RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+$("cp").dataset.n=P.length;$("cc").dataset.n=CATS.length;
 
-// شبکه عصبی تزئینی بالای صفحه
+// نوار کلمات متحرک
+var mt=CATS.map(function(c){return "<span>"+c[0]+"</span>"}).join("");$("mqt").innerHTML=mt+mt;
+
+// شبکه عصبی تزئینی
 (function(){var r=function(i){var x=Math.sin(i*127.1)*43758.5453;return x-Math.floor(x)},pt=[],h="",i,j;
 for(i=0;i<34;i++)pt.push([r(i)*800,r(i+99)*500]);
 for(i=0;i<pt.length;i++)for(j=i+1;j<pt.length;j++){var dx=pt[i][0]-pt[j][0],dy=pt[i][1]-pt[j][1];if(dx*dx+dy*dy<15000)h+='<line x1="'+pt[i][0]+'" y1="'+pt[i][1]+'" x2="'+pt[j][0]+'" y2="'+pt[j][1]+'"/>'}
 for(i=0;i<pt.length;i++)h+='<circle cx="'+pt[i][0]+'" cy="'+pt[i][1]+'" r="'+(2+r(i+7)*2.5)+'" style="animation-delay:'+(r(i+3)*3).toFixed(1)+'s"/>';
 $("net").innerHTML=h})();
 
-function toast(m){var t=$("toast");t.textContent=m||"کپی شد ✓";t.classList.add("on");setTimeout(function(){t.classList.remove("on")},1700)}
+function toast(){var t=$("toast");t.classList.add("on");setTimeout(function(){t.classList.remove("on")},1700)}
 function copy(txt){
- if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(function(){toast()},fb)}else fb();
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(toast,fb)}else fb();
  function fb(){var a=document.createElement("textarea");a.value=txt;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");toast()}catch(e){alert("کپی نشد؛ متن را دستی انتخاب کنید.")}a.remove()}
 }
 
+// کتابخانه
 function draw(){
- $("chips").innerHTML=["همه"].concat(CATS.map(function(c){return c[0]})).map(function(c){return '<button class="chip'+(c===cat?' on':'')+'" data-c="'+c+'">'+c+'</button>'}).join("");
- var list=P.filter(function(p){return (cat==="همه"||p.c===cat)&&(p.t+p.d+p.c+(p.p||"")).indexOf(qs)>-1});
- $("cards").innerHTML=list.length?list.map(function(p){return '<button class="card'+(p.v?' lk':'')+'" data-id="'+p.id+'"><div class="meta"><span>'+p.c+'</span><span class="'+(p.v?'pro':'')+'">'+(p.v?'🔒 ':'')+p.l+'</span></div><h3>'+p.t+'</h3><p>'+p.d+'</p></button>'}).join(""):'<div class="empty">موردی پیدا نشد. عبارت دیگری امتحان کنید.</div>';
+ var all=[["همه","همه مگاپرامپت‌ها","★"]].concat(CATS);
+ $("cats").innerHTML=all.map(function(c){var n=c[0]==="همه"?P.length:P.filter(function(p){return p.c===c[0]}).length;return '<button class="ct'+(c[0]===cat?' on':'')+'" data-c="'+c[0]+'"><i>'+c[2]+'</i><span>'+c[0]+'<small>'+n+' مورد</small></span></button>'}).join("");
+ var list=P.filter(function(p){return (cat==="همه"||p.c===cat)&&(p.t+p.d+p.c+p.p).indexOf(qs)>-1});
+ $("cards").innerHTML=list.length?list.map(function(p){return '<button class="card" data-id="'+p.id+'"><div class="meta"><span>'+p.c+'</span><span>'+p.l+'</span></div><h3>'+p.t+'</h3><p>'+p.d+'</p></button>'}).join(""):'<div class="empty">موردی پیدا نشد. عبارت دیگری امتحان کنید.</div>';
 }
-$("chips").onclick=function(e){var b=e.target.closest("[data-c]");if(b){cat=b.dataset.c;draw()}};
+$("cats").onclick=function(e){var b=e.target.closest("[data-c]");if(b){cat=b.dataset.c;draw()}};
 $("q").oninput=function(){qs=this.value.trim();draw()};
 var dlg=$("dlg");
 $("cards").onclick=function(e){
  var b=e.target.closest("[data-id]");if(!b)return;
  var p=P.filter(function(x){return x.id==b.dataset.id})[0];
- $("dc").textContent=p.c;$("dl").textContent=p.v?"ویژه":"سطح: "+p.l;$("dt").textContent=p.t;$("dd").textContent=p.d;
- if(p.v){$("dp").textContent="🔒 متن کامل این مگاپرامپت فقط برای دارندگان اشتراک نمایش داده می‌شود.";$("dcp").textContent="مشاهده اشتراک‌ها";$("dcp").onclick=function(){dlg.close();location.hash="#plans"}}
- else{$("dp").textContent=p.p;$("dcp").textContent="کپی مگاپرامپت";$("dcp").onclick=function(){copy(p.p)}}
+ $("dc").textContent=p.c;$("dl").textContent="سطح: "+p.l;$("dt").textContent=p.t;$("dd").textContent=p.d;$("dp").textContent=p.p;
+ $("dcp").onclick=function(){copy(p.p)};
  if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");
 };
 dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
 draw();
 
-$("plansBox").innerHTML=PLANS.map(function(p){
- var href=p.link||SUPPORT_LINK||"#faq",ext=/^https?:/.test(href);
- return '<div class="plan'+(p.hot?' hot':'')+'">'+(p.hot?'<span class="rb">محبوب‌ترین</span>':'')+'<h3>'+p.n+'</h3><div class="price">'+(p.price||'<small>قیمت به‌زودی اعلام می‌شود</small>')+(p.price&&p.per?' <small>'+p.per+'</small>':'')+'</div><ul>'+p.f.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><a class="btn'+(p.hot?'':' ghost')+'" href="'+href+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+p.btn+'</a></div>'}).join("");
-
+// فرم شخصی‌سازی
 $("bf").onsubmit=function(e){
  e.preventDefault();
- $("bo").textContent="تو یک متخصص حرفه‌ای در حوزه «"+$("b1").value.trim()+"» هستی.\n\nمخاطب هدف: "+$("b2").value.trim()+"\nهدف اصلی: "+$("b3").value+"\nلحن نوشتار: "+$("b4").value+"\n\nوظیفه: یک «"+$("b5").value+"» بساز.\n\nقوانین:\n- فارسی روان و ساده بنویس.\n- خروجی منظم، کاربردی و قابل اجرا باشد.\n- از کلی‌گویی پرهیز کن و مثال مشخص بیاور.\n- در پایان سه پیشنهاد برای بهبود نتیجه بده.";
+ $("bo").textContent="نقش: تو یک متخصص حرفه‌ای در حوزه «"+$("b1").value.trim()+"» هستی.\n\nمخاطب هدف: "+$("b2").value.trim()+"\nهدف اصلی: "+$("b3").value+"\nلحن نوشتار: "+$("b4").value+"\n\nوظیفه: یک «"+$("b5").value+"» بساز.\n\nقوانین:\n- فارسی روان و ساده بنویس.\n- خروجی منظم، کاربردی و قابل اجرا باشد.\n- از کلی‌گویی پرهیز کن و مثال مشخص بیاور.\n- در پایان سه پیشنهاد برای بهبود نتیجه بده.";
 };
 $("bc").onclick=function(){var t=$("bo").textContent;if(t.indexOf("خروجی اینجا")===0){alert("ابتدا فرم را پر کنید.");return}copy(t)};
 
-var sp=$("sup");
-if(SUPPORT_LINK){sp.href=SUPPORT_LINK;sp.target="_blank";sp.rel="noopener"}else{sp.textContent="راه ارتباطی به‌زودی اضافه می‌شود";sp.classList.add("dis")}
+// لینک‌های پشتیبانی و ثبت‌نام
+[$("sup"),$("reg")].forEach(function(a){if(SUPPORT_LINK){a.href=SUPPORT_LINK;a.target="_blank";a.rel="noopener"}else{a.textContent="راه ارتباطی به‌زودی اضافه می‌شود";a.classList.add("dis")}});
+
+// شمارنده‌ها
+function count(el){var n=+el.dataset.n,t0=null;if(RM){el.textContent=n.toLocaleString("fa-IR");return}
+ (function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/1300,1);el.textContent=Math.round(n*k).toLocaleString("fa-IR");if(k<1)requestAnimationFrame(f)})(performance.now())}
+
+// ظاهر شدن با اسکرول + حرف‌زدن ربات
+var mb=$("mb"),mt2;
+function say(t){mb.textContent=t;mb.classList.add("on");clearTimeout(mt2);mt2=setTimeout(function(){mb.classList.remove("on")},4500)}
+if("IntersectionObserver" in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");if(e.target.id==="cns"){[].forEach.call(e.target.querySelectorAll("b[data-n]"),count)}io.unobserve(e.target)}})},{threshold:.15});
+ [].forEach.call(document.querySelectorAll(".rv,.mgx"),function(x){io.observe(x)});
+ var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.target.dataset.say)say(e.target.dataset.say)})},{threshold:.45});
+ [].forEach.call(document.querySelectorAll("[data-say]"),function(x){so.observe(x)});
+}else{[].forEach.call(document.querySelectorAll(".rv,.mgx"),function(x){x.classList.add("in")});[].forEach.call(document.querySelectorAll("b[data-n]"),count)}
+$("mc").onclick=function(){scrollTo({top:0,behavior:"smooth"})};
+
+// ربات و پیشرفت اسکرول
+var px=0,py=0,tk=false;
+function onS(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;
+ var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+ $("pg").style.width=(h>0?y/h*100:0)+"%";
+ if(!RM){
+  $("rw").style.transform="translateY("+Math.min(y*.2,170)+"px) rotate("+(Math.sin(y/260)*5).toFixed(2)+"deg)";
+  $("rh").style.transform="rotate("+(Math.sin(y/180)*7).toFixed(2)+"deg)";
+  $("ey").setAttribute("transform","translate("+(Math.sin(y/140)*4+px).toFixed(1)+" "+(Math.min(y/240,1)*4+py).toFixed(1)+")");
+ }
+ var r=$("tl").getBoundingClientRect();
+ $("tl").style.setProperty("--p",Math.max(0,Math.min(1,(innerHeight*.65-r.top)/r.height)).toFixed(3));
+})}
+addEventListener("scroll",onS,{passive:true});addEventListener("resize",onS);
+addEventListener("pointermove",function(e){var r=$("rob").getBoundingClientRect();px=Math.max(-6,Math.min(6,(e.clientX-(r.left+r.width/2))/40));py=Math.max(-4,Math.min(4,(e.clientY-(r.top+r.height*.38))/50));onS()},{passive:true});
+onS();
 </script>
 </body>
 </html>
