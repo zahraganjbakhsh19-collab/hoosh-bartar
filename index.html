@@ -42,6 +42,20 @@ nav a:hover{color:var(--tx);background:var(--s2)}
 .mega{font-size:clamp(54px,16vw,132px);font-weight:900;line-height:1.3}
 .g{background:linear-gradient(90deg,var(--cy),var(--pu2),var(--pu),var(--cy));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 5s linear infinite}
 @keyframes sh{to{background-position:-250% 0}}
+/* آیکون‌های سه‌بعدی و متحرک */
+.i3{width:64px;height:64px;perspective:260px;flex:none;animation:fz 4.2s ease-in-out infinite;animation-delay:calc(var(--n,0)*-.6s)}
+.i3.sm{width:48px;height:48px}
+@keyframes fz{50%{transform:translateY(-6px)}}
+.t3{position:relative;width:100%;height:100%;border-radius:20px;background:linear-gradient(145deg,hsl(var(--h) 90% 66%),hsl(var(--h) 80% 42%) 58%,hsl(var(--h) 75% 24%));box-shadow:0 7px 0 hsl(var(--h) 70% 16%),0 18px 28px hsl(var(--h) 90% 50%/.4),inset 0 2px 0 rgba(255,255,255,.4),inset 0 -8px 14px rgba(0,0,0,.28);transform-style:preserve-3d;transform:rotateX(14deg) rotateY(-14deg);animation:t3 6s ease-in-out infinite;animation-delay:calc(var(--n,0)*-.8s)}
+.sm .t3{border-radius:15px;box-shadow:0 5px 0 hsl(var(--h) 70% 16%),0 12px 20px hsl(var(--h) 90% 50%/.35),inset 0 2px 0 rgba(255,255,255,.4)}
+@keyframes t3{0%,100%{transform:rotateX(18deg) rotateY(-20deg)}50%{transform:rotateX(6deg) rotateY(20deg)}}
+.t3:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);background-size:250% 100%;animation:shn 3.6s linear infinite;pointer-events:none}
+@keyframes shn{from{background-position:200% 0}to{background-position:-100% 0}}
+.t3:before{content:"";position:absolute;top:-4px;left:-4px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 10px 3px hsl(var(--h) 100% 75%);transform:translateZ(30px);animation:pl 2.4s infinite}
+.gl{position:absolute;inset:0;margin:auto;width:56%;height:56%;overflow:visible;transform:translateZ(22px);filter:drop-shadow(0 3px 4px rgba(0,0,0,.35));fill:none;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.gl .ex{stroke:hsl(var(--h) 75% 14%);transform:translate(1.6px,2.6px)}
+.gl .fr{stroke:url(#ig)}
+.card:hover .t3,.ct:hover .t3{animation-duration:1.8s}
 .hero{padding:40px 0 30px;overflow:hidden}
 #net{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
 #net line{stroke:rgba(143,61,255,.35);stroke-width:1}
@@ -75,23 +89,22 @@ nav a:hover{color:var(--tx);background:var(--s2)}
 .tl:before,.tl:after{content:"";position:absolute;right:15px;top:0;width:2px}
 .tl:before{bottom:0;background:var(--line)}
 .tl:after{height:calc(var(--p)*100%);background:linear-gradient(var(--cy),var(--pu));box-shadow:0 0 12px var(--pu)}
-.ti{position:relative;margin-bottom:14px}
-.ti b{position:absolute;right:-48px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:2px solid var(--pu);display:grid;place-items:center;font-size:13px;color:var(--cy)}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.ti{position:relative;margin-bottom:16px;display:flex;align-items:center;gap:16px}
+.ti .nb{position:absolute;right:-48px;top:50%;margin-top:-16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:2px solid var(--pu);display:grid;place-items:center;font-size:13px;color:var(--cy)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
 .card{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:18px;padding:20px;transition:.25s;text-align:right;color:inherit;font:inherit;width:100%}
 .card:hover{border-color:rgba(143,61,255,.7);box-shadow:0 0 34px rgba(143,61,255,.2)}
-.card h3{font-size:18px;margin:6px 0 4px;line-height:1.6}
+.card h3{font-size:18px;margin:8px 0 4px;line-height:1.6}
 .card p{color:var(--mu);font-size:14px}
 button.card{cursor:pointer}
+.ben .i3{margin-bottom:14px}
 .meta{display:flex;justify-content:space-between;font-size:12px;color:var(--pu2)}
 .meta span:last-child{color:var(--mu)}
-.cats{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin:18px 0 22px}
-.ct{display:flex;align-items:center;gap:10px;background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:10px 12px;color:var(--tx);font:inherit;font-size:14px;cursor:pointer;text-align:right}
-.ct i{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-style:normal;font-weight:800;background:rgba(143,61,255,.15);border:1px solid rgba(143,61,255,.45);color:var(--pu2)}
-.ct small{display:block;color:var(--mu);font-size:11px;line-height:1.4}
-.ct.on{background:var(--pu);border-color:var(--pu)}
-.ct.on i{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
-.ct.on small{color:#eadcff}
+.cats{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));margin:20px 0 26px}
+.ct{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:18px 8px 14px;color:var(--tx);font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.25s}
+.ct small{display:block;color:var(--mu);font-size:11px;font-weight:400;line-height:1.4}
+.ct:hover{border-color:rgba(143,61,255,.7)}
+.ct.on{border-color:var(--pu);background:linear-gradient(160deg,rgba(143,61,255,.3),var(--s1));box-shadow:0 0 30px var(--glow)}
 input,select{width:100%;background:var(--s1);border:1px solid var(--line);color:var(--tx);font:inherit;padding:12px 14px;border-radius:12px;outline:0}
 input:focus,select:focus{border-color:var(--pu);box-shadow:0 0 0 3px var(--glow)}
 select option{background:var(--s1)}
@@ -102,6 +115,9 @@ select option{background:var(--s1)}
 .out{white-space:pre-wrap;background:#05040a;border:1px dashed var(--pu);border-radius:14px;padding:16px;font-size:14px;min-height:200px;color:#ddd8f2;margin-bottom:12px}
 .soon{display:inline-block;background:rgba(143,61,255,.18);color:var(--pu2);font-size:12px;padding:2px 12px;border-radius:99px;margin-right:8px}
 .dis{opacity:.55;pointer-events:none}
+.cta{text-align:center;background:linear-gradient(135deg,rgba(143,61,255,.28),rgba(94,225,255,.08));border:1px solid var(--pu);border-radius:28px;padding:44px 20px;box-shadow:0 0 70px rgba(143,61,255,.25)}
+.cta .sub{margin-inline:auto}
+.cta .acts{justify-content:center}
 details{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
 summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
 summary:after{content:"+";color:var(--cy);font-size:20px}
@@ -124,11 +140,29 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font
 <body>
 <div id="pg"></div>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs><linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="8" y1="4" x2="40" y2="44"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#efe2ff"/></linearGradient></defs>
+<symbol id="i-doc" viewBox="0 0 48 48"><path d="M13 6h16l8 8v28H13z"/><path d="M29 6v8h8M19 24h12M19 31h12"/></symbol>
+<symbol id="i-clap" viewBox="0 0 48 48"><rect x="7" y="20" width="34" height="21" rx="3"/><path d="M7 20l3-9 28 6-1 3M16 13l4 8M25 15l4 8"/></symbol>
+<symbol id="i-heart" viewBox="0 0 48 48"><path d="M8 10h32v22H26l-8 8v-8H8z"/><path d="M24 27c-5-3.5-7-6-7-8.5a3.8 3.8 0 0 1 7-1.8 3.8 3.8 0 0 1 7 1.8c0 2.5-2 5-7 8.5z"/></symbol>
+<symbol id="i-image" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="19" r="3.5"/><path d="M6 34l10-10 8 8 6-6 12 10"/></symbol>
+<symbol id="i-video" viewBox="0 0 48 48"><rect x="6" y="11" width="36" height="26" rx="5"/><path d="M20 18l11 6-11 6z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 48 48"><path d="M8 41h32"/><rect x="11" y="25" width="7" height="12" rx="1"/><rect x="21" y="17" width="7" height="20" rx="1"/><rect x="31" y="8" width="7" height="29" rx="1"/></symbol>
+<symbol id="i-cap" viewBox="0 0 48 48"><path d="M4 18l20-9 20 9-20 9z"/><path d="M12 23v10c0 3 6 6 12 6s12-3 12-6V23M44 18v12"/></symbol>
+<symbol id="i-build" viewBox="0 0 48 48"><path d="M10 42V12l16-5v35M26 20l12 4v18M5 42h38"/><path d="M16 18h4M16 25h4M16 32h4M31 30h3M31 36h3"/></symbol>
+<symbol id="i-coin" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 12v24M29 17c-1-1.5-3-2.3-5-2.3-3 0-5 1.5-5 3.6 0 5 10 2.2 10 7.4 0 2.2-2.2 3.8-5 3.8-2.3 0-4.3-1-5.3-2.6"/></symbol>
+<symbol id="i-star" viewBox="0 0 48 48"><path d="M24 5l5.6 12 13 1.5-9.6 8.9 2.6 12.9L24 33.6 12.4 40.3 15 27.4 5.4 18.5l13-1.5z"/></symbol>
+<symbol id="i-layers" viewBox="0 0 48 48"><path d="M24 6l18 9-18 9-18-9z"/><path d="M6 24l18 9 18-9M6 33l18 9 18-9"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 48 48"><path d="M8 14h6M22 14h18M8 24h14M30 24h10M8 34h4M20 34h20"/><circle cx="18" cy="14" r="4"/><circle cx="26" cy="24" r="4"/><circle cx="16" cy="34" r="4"/></symbol>
+<symbol id="i-chip" viewBox="0 0 48 48"><rect x="13" y="13" width="22" height="22" rx="4"/><rect x="19" y="19" width="10" height="10" rx="2"/><path d="M19 6v7M29 6v7M19 35v7M29 35v7M6 19h7M6 29h7M35 19h7M35 29h7"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 48 48"><path d="M27 5L10 27h12l-3 16 19-23H26z"/></symbol>
+</svg>
+
 <header>
  <div class="wrap bar">
   <a href="#home" class="logo"><i></i><span>هوش برتر<small>HOOSH BARTAR</small></span></a>
-  <nav><a href="#course">دوره</a><a href="#library">کتابخانه</a><a href="#builder">ساخت شخصی</a><a href="#ai">اجرای مستقیم</a><a href="#faq">پرسش‌ها</a></nav>
-  <a href="#login" class="btn sm">ورود هنرجو</a>
+  <nav><a href="#why">مزایا</a><a href="#course">دوره</a><a href="#library">کتابخانه</a><a href="#builder">ساخت شخصی</a><a href="#faq">پرسش‌ها</a></nav>
+  <a href="#join" class="btn sm">شروع رایگان</a>
  </div>
 </header>
 
@@ -176,6 +210,15 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font
 
 <div class="mq"><div id="mqt"></div></div>
 
+<section id="why">
+ <div class="wrap">
+  <span class="tag">چرا هوش برتر؟</span>
+  <h2 class="rv">با ساختار درست شروع کن</h2>
+  <p class="sub rv">به‌جای آزمون و خطای طولانی، از دستورهای آماده و آزمایش‌شده استفاده کن.</p>
+  <div class="grid" id="ben"></div>
+ </div>
+</section>
+
 <section class="crs" id="course" data-say="دوره کاملاً رایگانه. از ماژول اول شروع کن!">
  <svg class="orb" viewBox="0 0 600 600" aria-hidden="true"><circle cx="300" cy="300" r="290" fill="none" stroke="#8f3dff" stroke-width="1.5" stroke-dasharray="6 14"/><circle cx="300" cy="300" r="210" fill="none" stroke="#5ee1ff" stroke-width="1" stroke-dasharray="2 10"/><circle cx="300" cy="10" r="7" fill="#c084fc"/><circle cx="90" cy="300" r="5" fill="#5ee1ff"/></svg>
  <div class="wrap" style="position:relative">
@@ -188,23 +231,16 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font
    <div class="cn"><b id="cc" data-n="9">0</b><span>حوزه کاربردی</span></div>
    <div class="cn"><b style="font-size:30px">رایگان</b><span>برای همه</span></div>
   </div>
-  <div class="tl" id="tl">
-   <div class="ti card rv"><b>۱</b><h3>شروع مسیر</h3><p>آشنایی با هوش مصنوعی و ساخت اولین مگاپرامپت.</p></div>
-   <div class="ti card rv"><b>۲</b><h3>پرامپت‌نویسی حرفه‌ای</h3><p>نقش، هدف، ورودی، خروجی و قانون؛ فرمول نتیجه دقیق.</p></div>
-   <div class="ti card rv"><b>۳</b><h3>تولید محتوا و سناریو</h3><p>تقویم محتوا، هوک، کپشن و سناریوی ریلز.</p></div>
-   <div class="ti card rv"><b>۴</b><h3>تصویر و ویدئو با هوش مصنوعی</h3><p>پرامپت‌های دقیق برای تصویر، ویدئو و انیمیشن.</p></div>
-   <div class="ti card rv"><b>۵</b><h3>رشد پیج و فروش</h3><p>برندسازی، متن فروش و تحلیل رقبا.</p></div>
-   <div class="ti card rv"><b>۶</b><h3>درآمدزایی آنلاین</h3><p>تبدیل مهارت به محصول و ساخت دوره.</p></div>
-  </div>
-  <p style="margin-top:26px"><a class="btn" id="reg" href="#faq">ثبت‌نام رایگان در دوره</a></p>
+  <div class="tl" id="tl"></div>
+  <p style="margin-top:26px"><a class="btn reg" href="#faq">ثبت‌نام رایگان در دوره</a></p>
  </div>
 </section>
 
 <section id="library" data-say="هر مگاپرامپتی خواستی بزن و با یک کلیک کپی کن.">
  <div class="wrap">
   <span class="tag">کتابخانه رایگان</span>
-  <h2 class="rv">دسته‌بندی‌ها و مگاپرامپت‌ها</h2>
-  <p class="sub rv">یک حوزه را انتخاب کن یا جست‌وجو کن. همه مگاپرامپت‌ها رایگان و قابل کپی‌اند.</p>
+  <h2 class="rv">حوزه‌ات را انتخاب کن</h2>
+  <p class="sub rv">روی یک حوزه بزن یا جست‌وجو کن. همه مگاپرامپت‌ها رایگان و قابل کپی‌اند.</p>
   <input id="q" type="search" placeholder="جست‌وجو؛ مثلاً: ریلز، فروش، تصویر، آموزش…">
   <div class="cats" id="cats"></div>
   <div class="grid" id="cards"></div>
@@ -238,26 +274,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font
   <span class="tag">به‌زودی</span>
   <h2 class="rv">اجرای مستقیم هوش مصنوعی</h2>
   <p class="sub rv">در نسخه‌های بعد، مگاپرامپت را بدون خروج از سایت اجرا می‌کنی. این بخش فعلاً فقط معرفی است و به هیچ سرویس هوش مصنوعی وصل نیست.</p>
-  <div class="grid">
-   <div class="card rv"><h3>۱. انتخاب مگاپرامپت</h3><p>از کتابخانه یا فرم شخصی‌سازی.</p></div>
-   <div class="card rv"><h3>۲. اجرا با یک کلیک</h3><p>اتصال امن از طریق سرور اختصاصی.</p></div>
-   <div class="card rv"><h3>۳. دریافت و ذخیره</h3><p>خروجی در پنل هنرجو نگه‌داری می‌شود.</p></div>
-  </div>
- </div>
-</section>
-
-<section id="login">
- <div class="wrap">
-  <div class="panel" style="max-width:460px;margin:auto">
-   <span class="tag">پنل هنرجو</span><span class="soon">به‌زودی فعال می‌شود</span>
-   <h2 style="font-size:26px">ورود هنرجو</h2>
-   <p class="sub" style="margin-bottom:10px">عضویت و ورود واقعی در مرحله بعد با پایگاه داده امن اضافه می‌شود. این فرم فعلاً نمایشی است و هیچ اطلاعاتی دریافت یا ذخیره نمی‌کند.</p>
-   <div class="dis">
-    <label style="display:block;color:var(--mu);font-size:14px">ایمیل یا شماره موبایل</label><input disabled>
-    <label style="display:block;color:var(--mu);font-size:14px;margin-top:10px">رمز عبور</label><input type="password" disabled>
-    <button class="btn" style="width:100%;margin-top:16px" disabled>ورود</button>
-   </div>
-  </div>
  </div>
 </section>
 
@@ -270,7 +286,32 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font
   <details><summary>همه‌چیز رایگان است؟</summary><p>بله. دوره، کتابخانه مگاپرامپت‌ها و ابزار ساخت مگاپرامپت شخصی برای همه رایگان است.</p></details>
   <details><summary>روی کدام هوش مصنوعی کار می‌کند؟</summary><p>متن‌ها روی اکثر ابزارهای چت‌محور قابل استفاده‌اند. پرامپت‌های تصویر و ویدئو را می‌توان در ابزارهای مربوطه استفاده کرد.</p></details>
   <details><summary>اطلاعاتی که در فرم وارد می‌کنم ذخیره می‌شود؟</summary><p>خیر. در نسخه فعلی همه‌چیز فقط در مرورگر شما پردازش می‌شود.</p></details>
-  <p style="margin-top:20px"><a class="btn" id="sup" href="#faq">ارتباط با پشتیبانی</a></p>
+  <p style="margin-top:20px"><a class="btn reg" href="#faq">ارتباط با پشتیبانی</a></p>
+ </div>
+</section>
+
+<section id="join">
+ <div class="wrap">
+  <div class="cta rv">
+   <h2>آماده‌ای شروع کنی؟</h2>
+   <p class="sub">همین حالا رایگان در دوره هوش برتر ثبت‌نام کن و اولین مگاپرامپتت را بساز.</p>
+   <div class="acts"><a class="btn reg" href="#faq">ثبت‌نام رایگان</a><a href="#library" class="btn ghost">دیدن مگاپرامپت‌ها</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="login" style="padding-top:0">
+ <div class="wrap">
+  <div class="panel" style="max-width:460px;margin:auto">
+   <span class="tag">پنل هنرجو</span><span class="soon">به‌زودی فعال می‌شود</span>
+   <h2 style="font-size:24px">ورود هنرجو</h2>
+   <p class="sub" style="margin-bottom:10px">عضویت و ورود واقعی در مرحله بعد با پایگاه داده امن اضافه می‌شود. این فرم فعلاً نمایشی است و هیچ اطلاعاتی دریافت یا ذخیره نمی‌کند.</p>
+   <div class="dis">
+    <label style="display:block;color:var(--mu);font-size:14px">ایمیل یا شماره موبایل</label><input disabled>
+    <label style="display:block;color:var(--mu);font-size:14px;margin-top:10px">رمز عبور</label><input type="password" disabled>
+    <button class="btn" style="width:100%;margin-top:16px" disabled>ورود</button>
+   </div>
+  </div>
  </div>
 </section>
 </main>
@@ -291,9 +332,14 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mu);font
 
 <script>
 // لینک پشتیبانی و ثبت‌نام (اینستاگرام یا تلگرام). اگر پیج شما فرق دارد اینجا عوض کنید:
-var SUPPORT_LINK = "https://t.me/zedarchi";
+var SUPPORT_LINK = "https://https://t.me/zedarch";
 
-var CATS=[["تولید محتوا","برنامه و بازنویسی","م"],["سناریونویسی","ریلز و سریال","س"],["اینستاگرام","هوک، کپشن، بیو","ا"],["تولید تصویر","سینمایی و محصول","ت"],["تولید ویدئو","شات‌به‌شات","و"],["کسب‌وکار و فروش","متن فروش و رقبا","ک"],["آموزش و یادگیری","برنامه مهارت","آ"],["معماری و طراحی","معرفی پروژه","ع"],["درآمدزایی","محصول و دوره","د"]];
+// حوزه‌ها: [نام، توضیح کوتاه، آیکون، رنگ]
+var CATS=[["تولید محتوا","برنامه و بازنویسی","doc",265],["سناریونویسی","ریلز و سریال","clap",300],["اینستاگرام","هوک، کپشن، بیو","heart",350],["تولید تصویر","سینمایی و محصول","image",195],["تولید ویدئو","شات‌به‌شات","video",18],["کسب‌وکار و فروش","متن فروش و رقبا","chart",150],["آموزش و یادگیری","برنامه مهارت","cap",45],["معماری و طراحی","معرفی پروژه","build",215],["درآمدزایی","محصول و دوره","coin",100]];
+var BEN=[["ساختار حرفه‌ای","layers",265,"هر مگاپرامپت شامل نقش، هدف، ورودی، خروجی و قانون است."],["شخصی‌سازی آسان","sliders",195,"جاهای خالی مشخص‌اند؛ فقط اطلاعات خودت را جایگزین کن."],["سازگار با ابزارها","chip",150,"برای متن، تصویر و ویدئو در ابزارهای رایج قابل استفاده است."],["سرعت بالا","bolt",45,"در چند ثانیه از ایده به خروجی قابل‌استفاده برس."]];
+// ماژول‌های دوره را با سرفصل‌های واقعی خودتان عوض کنید
+var MODS=[["شروع مسیر","star",280,"آشنایی با هوش مصنوعی و ساخت اولین مگاپرامپت."],["پرامپت‌نویسی حرفه‌ای","doc",195,"نقش، هدف، ورودی، خروجی و قانون؛ فرمول نتیجه دقیق."],["تولید محتوا و سناریو","clap",300,"تقویم محتوا، هوک، کپشن و سناریوی ریلز."],["تصویر و ویدئو با هوش مصنوعی","image",18,"پرامپت‌های دقیق برای تصویر، ویدئو و انیمیشن."],["رشد پیج و فروش","chart",150,"برندسازی، متن فروش و تحلیل رقبا."],["درآمدزایی آنلاین","coin",100,"تبدیل مهارت به محصول و ساخت دوره."]];
+
 var P=[
 {id:1,c:"تولید محتوا",l:"مبتدی",t:"برنامه محتوایی ۳۰ روزه",d:"تقویم کامل محتوا با هوک، فرمت و معیار سنجش.",
 p:"نقش: استراتژیست ارشد محتوا.\nهدف: ساخت تقویم محتوایی ۳۰ روزه برای [نام پیج یا برند] در حوزه [حوزه].\nورودی‌ها: مخاطب [مخاطب هدف]، هدف اصلی [رشد/فروش/اعتبار]، پلتفرم [پلتفرم]، زمان تولید در هفته [ساعت].\nخروجی: جدول با ستون‌های روز، موضوع، فرمت، هوک ۳ ثانیه‌ای، پیام اصلی، دعوت به اقدام و معیار سنجش؛ در پایان سه ستون محتوایی اصلی و سهم هرکدام را بنویس.\nقوانین: ایده‌ها قابل اجرا با گوشی، متنوع و بدون تکرار باشند."},
@@ -333,7 +379,12 @@ var $=function(i){return document.getElementById(i)};
 var cat="همه",qs="",RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
 $("cp").dataset.n=P.length;$("cc").dataset.n=CATS.length;
 
-// نوار کلمات متحرک
+// ساخت آیکون سه‌بعدی
+function IC(id,h,n,s){return '<div class="i3'+(s?' sm':'')+'" style="--h:'+h+';--n:'+n+'"><div class="t3"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-'+id+'" class="ex"/><use href="#i-'+id+'" class="fr"/></svg></div></div>'}
+
+$("ben").innerHTML=BEN.map(function(b,i){return '<div class="card ben rv" style="transition-delay:'+i*.1+'s">'+IC(b[1],b[2],i)+'<h3>'+b[0]+'</h3><p>'+b[3]+'</p></div>'}).join("");
+$("tl").innerHTML=MODS.map(function(m,i){return '<div class="ti card rv"><span class="nb">'+(i+1).toLocaleString("fa-IR")+'</span>'+IC(m[1],m[2],i,1)+'<div><h3 style="margin:0">'+m[0]+'</h3><p>'+m[3]+'</p></div></div>'}).join("");
+
 var mt=CATS.map(function(c){return "<span>"+c[0]+"</span>"}).join("");$("mqt").innerHTML=mt+mt;
 
 // شبکه عصبی تزئینی
@@ -351,12 +402,12 @@ function copy(txt){
 
 // کتابخانه
 function draw(){
- var all=[["همه","همه مگاپرامپت‌ها","★"]].concat(CATS);
- $("cats").innerHTML=all.map(function(c){var n=c[0]==="همه"?P.length:P.filter(function(p){return p.c===c[0]}).length;return '<button class="ct'+(c[0]===cat?' on':'')+'" data-c="'+c[0]+'"><i>'+c[2]+'</i><span>'+c[0]+'<small>'+n+' مورد</small></span></button>'}).join("");
+ var all=[["همه","همه مگاپرامپت‌ها","star",280]].concat(CATS);
+ $("cats").innerHTML=all.map(function(c,i){var n=c[0]==="همه"?P.length:P.filter(function(p){return p.c===c[0]}).length;return '<button class="ct'+(c[0]===cat?' on':'')+'" data-c="'+c[0]+'">'+IC(c[2],c[3],i)+'<span>'+c[0]+'<small>'+n.toLocaleString("fa-IR")+' مورد</small></span></button>'}).join("");
  var list=P.filter(function(p){return (cat==="همه"||p.c===cat)&&(p.t+p.d+p.c+p.p).indexOf(qs)>-1});
  $("cards").innerHTML=list.length?list.map(function(p){return '<button class="card" data-id="'+p.id+'"><div class="meta"><span>'+p.c+'</span><span>'+p.l+'</span></div><h3>'+p.t+'</h3><p>'+p.d+'</p></button>'}).join(""):'<div class="empty">موردی پیدا نشد. عبارت دیگری امتحان کنید.</div>';
 }
-$("cats").onclick=function(e){var b=e.target.closest("[data-c]");if(b){cat=b.dataset.c;draw()}};
+$("cats").onclick=function(e){var b=e.target.closest("[data-c]");if(b){cat=b.dataset.c;draw();$("cards").scrollIntoView({behavior:"smooth",block:"nearest"})}};
 $("q").oninput=function(){qs=this.value.trim();draw()};
 var dlg=$("dlg");
 $("cards").onclick=function(e){
@@ -377,13 +428,13 @@ $("bf").onsubmit=function(e){
 $("bc").onclick=function(){var t=$("bo").textContent;if(t.indexOf("خروجی اینجا")===0){alert("ابتدا فرم را پر کنید.");return}copy(t)};
 
 // لینک‌های پشتیبانی و ثبت‌نام
-[$("sup"),$("reg")].forEach(function(a){if(SUPPORT_LINK){a.href=SUPPORT_LINK;a.target="_blank";a.rel="noopener"}else{a.textContent="راه ارتباطی به‌زودی اضافه می‌شود";a.classList.add("dis")}});
+[].forEach.call(document.querySelectorAll(".reg"),function(a){if(SUPPORT_LINK){a.href=SUPPORT_LINK;a.target="_blank";a.rel="noopener"}else{a.textContent="راه ارتباطی به‌زودی اضافه می‌شود";a.classList.add("dis")}});
 
 // شمارنده‌ها
 function count(el){var n=+el.dataset.n,t0=null;if(RM){el.textContent=n.toLocaleString("fa-IR");return}
  (function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/1300,1);el.textContent=Math.round(n*k).toLocaleString("fa-IR");if(k<1)requestAnimationFrame(f)})(performance.now())}
 
-// ظاهر شدن با اسکرول + حرف‌زدن ربات
+// ظاهر شدن با اسکرول و حرف‌زدن ربات
 var mb=$("mb"),mt2;
 function say(t){mb.textContent=t;mb.classList.add("on");clearTimeout(mt2);mt2=setTimeout(function(){mb.classList.remove("on")},4500)}
 if("IntersectionObserver" in window){
@@ -394,7 +445,7 @@ if("IntersectionObserver" in window){
 }else{[].forEach.call(document.querySelectorAll(".rv,.mgx"),function(x){x.classList.add("in")});[].forEach.call(document.querySelectorAll("b[data-n]"),count)}
 $("mc").onclick=function(){scrollTo({top:0,behavior:"smooth"})};
 
-// ربات و پیشرفت اسکرول
+// ربات و نوار پیشرفت اسکرول
 var px=0,py=0,tk=false;
 function onS(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;
  var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
